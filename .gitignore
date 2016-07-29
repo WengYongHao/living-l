@@ -1,0 +1,47 @@
+Last login: Fri Jul 29 18:21:08 on ttys003
+➜  project git:(master) ✗ cd walk/walk 
+➜  walk git:(develop) ✗ ls -a
+.                Podfile          walk             walkUITests
+..               Podfile.lock     walk.xcodeproj
+.DS_Store        Pods             walk.xcworkspace
+.gitignore       config           walkTests
+➜  walk git:(develop) ✗ cp .gitignore 
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file ... target_directory
+➜  walk git:(develop) ✗ cp -n .gitignore
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file ... target_directory
+➜  walk git:(develop) ✗ cp -r .gitignore
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file ... target_directory
+➜  walk git:(develop) ✗ cd ~/Documents/swift/project/walk/walk/.gitignore
+cd: not a directory: /Users/yonghao/Documents/swift/project/walk/walk/.gitignore
+➜  walk git:(develop) ✗ cd ~/Documents/swift/project/walk/walk/.gitignore
+cd: not a directory: /Users/yonghao/Documents/swift/project/walk/walk/.gitignore
+➜  walk git:(develop) ✗ vi ~/Documents/swift/project/walk/walk/.gitignore
+➜  walk git:(develop) ✗ vi ~/Documents/swift/project/walk/walk/.gitignore
+
+# Carthage/Checkouts
+
+Carthage/Build
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
+
+fastlane/report.xml
+fastlane/screenshots
+
+## Other
+*.xccheckout
+
+
+
+
