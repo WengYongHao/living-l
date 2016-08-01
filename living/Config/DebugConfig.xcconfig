@@ -1,0 +1,13 @@
+//
+//  DebugConfig.xcconfig
+//  living
+//
+//  Created by yonghao on 16/8/1.
+//  Copyright © 2016年 Yonghao. All rights reserved.
+//
+#include "../Pods/Target Support Files/Pods-living/Pods-living.debug.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = com.boss.living.debug
+
+PRODUCT_NAME = livingDB
+

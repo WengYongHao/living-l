@@ -1,0 +1,13 @@
+//
+//  ReleaseConfig.xcconfig
+//  living
+//
+//  Created by yonghao on 16/8/2.
+//  Copyright © 2016年 Yonghao. All rights reserved.
+//
+#include "../Pods/Target Support Files/Pods-living/Pods-living.release.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = com.boss.living
+
+PRODUCT_NAME = living
+

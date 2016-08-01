@@ -37,7 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D8D7C981D4F9D2E008B794C /* living.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = living.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D0A09281D4FB02400C52F82 /* ReleaseConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ReleaseConfig.xcconfig; sourceTree = "<group>"; };
+		1D1DC19D1D4FA80500EF5AB6 /* DebugConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
+		1D8D7C981D4F9D2E008B794C /* livingDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = livingDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8D7C9C1D4F9D2E008B794C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D8D7C9E1D4F9D2E008B794C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D8D7C9F1D4F9D2E008B794C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,9 +87,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D1DC19C1D4FA7DB00EF5AB6 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1D1DC19D1D4FA80500EF5AB6 /* DebugConfig.xcconfig */,
+				1D0A09281D4FB02400C52F82 /* ReleaseConfig.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		1D8D7C8F1D4F9D2E008B794C = {
 			isa = PBXGroup;
 			children = (
+				1D1DC19C1D4FA7DB00EF5AB6 /* Config */,
 				1D8D7C9A1D4F9D2E008B794C /* living */,
 				1D8D7CB71D4F9D2F008B794C /* livingTests */,
 				1D8D7CC21D4F9D2F008B794C /* livingUITests */,
@@ -100,7 +112,7 @@
 		1D8D7C991D4F9D2E008B794C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D8D7C981D4F9D2E008B794C /* living.app */,
+				1D8D7C981D4F9D2E008B794C /* livingDB.app */,
 				1D8D7CB41D4F9D2F008B794C /* livingTests.xctest */,
 				1D8D7CBF1D4F9D2F008B794C /* livingUITests.xctest */,
 			);
@@ -187,7 +199,7 @@
 			);
 			name = living;
 			productName = living;
-			productReference = 1D8D7C981D4F9D2E008B794C /* living.app */;
+			productReference = 1D8D7C981D4F9D2E008B794C /* livingDB.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1D8D7CB31D4F9D2F008B794C /* livingTests */ = {
@@ -237,6 +249,7 @@
 				TargetAttributes = {
 					1D8D7C971D4F9D2E008B794C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = J2PUEQJQYX;
 					};
 					1D8D7CB31D4F9D2F008B794C = {
 						CreatedOnToolsVersion = 7.3;
@@ -434,8 +447,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -492,27 +505,34 @@
 		};
 		1D8D7CC91D4F9D2F008B794C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4BEE6FB5D9A2BCCB36BD721 /* Pods-living.debug.xcconfig */;
+			baseConfigurationReference = 1D1DC19D1D4FA80500EF5AB6 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = living/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yonghao.living;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(PRODUCT_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		1D8D7CCA1D4F9D2F008B794C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4704495F1A08D48BA20FC169 /* Pods-living.release.xcconfig */;
+			baseConfigurationReference = 1D0A09281D4FB02400C52F82 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = living/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yonghao.living;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(PRODUCT_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
